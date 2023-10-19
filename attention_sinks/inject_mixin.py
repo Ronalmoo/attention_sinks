@@ -15,7 +15,6 @@ MODEL_NAME_MAPPING = {
     "mpt": "MptModel",
     "gpt_neox": "GPTNeoXModel",
     "gptj": "GPTJModel",
-    "mistral": "MistralModel",
     "qwen": "QWenModel",
 }
 ATTENTION_NAME_MAPPING = {
@@ -24,7 +23,6 @@ ATTENTION_NAME_MAPPING = {
     "mpt": "MptAttention",
     "gpt_neox": "GPTNeoXAttention",
     "gptj": "GPTJAttention",
-    "mistral": "MistralAttention",
     "qwen": "QWenAttention",
 }
 KV_DIM_MAPPING = {
@@ -33,7 +31,6 @@ KV_DIM_MAPPING = {
     "mpt": (2, 2),
     "gpt_neox": (2, 2),
     "gptj": (2, 2),
-    "mistral": (2, 2),
     "qwen": (1, 1),
 }
 
@@ -86,7 +83,6 @@ class InjectAttentionSinksMixin:
             gpt_neox_pos_shift_attention_forward,
             gptj_pos_shift_attention_forward,
             llama_pos_shift_attention_forward,
-            mistral_pos_shift_attention_forward,
             qwen_pos_shift_attention_forward,
         )
 
@@ -96,7 +92,6 @@ class InjectAttentionSinksMixin:
             "mpt": None,
             "gpt_neox": gpt_neox_pos_shift_attention_forward,
             "gptj": gptj_pos_shift_attention_forward,
-            "mistral": mistral_pos_shift_attention_forward,
             "qwen": qwen_pos_shift_attention_forward,
         }
 
